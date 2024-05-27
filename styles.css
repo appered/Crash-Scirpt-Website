@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #282c34;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.title {
+    font-size: 4em;
+    margin-bottom: 20px;
+    position: relative;
+    animation: popOut 1s ease-in-out infinite alternate;
+}
+
+@keyframes popOut {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.falling-text {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.falling-text div {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        top: -100px;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        top: 200px;
+        opacity: 0;
+    }
+}
+
+.copy-button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    background: #61dafb;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.copy-button:hover {
+    background: #21a1f1;
+}
